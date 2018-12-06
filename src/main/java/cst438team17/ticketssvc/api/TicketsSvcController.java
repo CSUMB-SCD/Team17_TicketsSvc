@@ -18,6 +18,8 @@ public class TicketsSvcController {
     @GetMapping ("/ConcertTickets")
     @ResponseBody
     List<ConcertTicket> getConcertTickets() {
-        return null;
+        //This is where you call the TicketsDBSvc/getAll
+        List<ConcertTicket> result = manager.getConcertTicketList();
+        return result;
     }
 }

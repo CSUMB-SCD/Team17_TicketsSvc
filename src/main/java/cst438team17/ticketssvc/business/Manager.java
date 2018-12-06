@@ -14,6 +14,6 @@ public class Manager {
     ConcertTicketsDBClient concertTicketsDBClient;
 
     public List<ConcertTicket> getConcertTicketList() {
-        return null;
+        return concertTicketsDBClient.getConcertTicketData();
     }
 }
