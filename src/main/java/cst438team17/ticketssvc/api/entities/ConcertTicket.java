@@ -2,16 +2,24 @@ package cst438team17.ticketssvc.api.entities;
 
 public class ConcertTicket {
     private String id;
-    private Artist artist;
-    private Date date;
-    private Venue venue;
-    private int numberOfTickets;
+    private String artist;
+    private String date;
+    private String venue;
+    private int stock;
+    private double price;
+    private String description;
+    // private Artist artist;
+    // private Date date;
+    // private Venue venue;
+    // private int numberOfTickets;
 
-    public ConcertTicket(Artist artist, Date date, Venue venue, int numberOfTickets) {
+    public ConcertTicket(String artist, String date, String venue, int stock, double price, String description) {
         this.artist = artist;
         this.date = date;
         this.venue = venue;
-        this.numberOfTickets = numberOfTickets;
+        this.stock = stock;
+        this.price = price;
+        this.description = description;
     }
 
     public void setId(String id) {
@@ -22,35 +30,51 @@ public class ConcertTicket {
         return id;
     }
 
-    public void setArtist (Artist artist) {
+    public void setArtist (String artist) {
         this.artist = artist;
     }
 
-    public Artist getArtist () {
+    public String getArtist () {
         return artist;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setVenue (Venue venue) {
+    public void setVenue (String venue) {
         this.venue = venue;
     }
 
-    public Venue getVenue() {
+    public String getVenue() {
         return venue;
     }
 
     public void setNumberOfTickets (int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
+        this.stock = numberOfTickets;
     }
 
     public int getNumberOfTickets() {
-        return numberOfTickets;
+        return stock;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setDescription(String desc) {
+        this.description = desc;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
