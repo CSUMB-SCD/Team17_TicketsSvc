@@ -63,11 +63,11 @@ public class ConcertTicket {
         return quantity;
     }
 
-    public void setNumberOfTickets (int numberOfTickets) {
-        this.stock = numberOfTickets;
+    public void setStock (int stock) {
+        this.stock = stock;
     }
 
-    public int getNumberOfTickets() {
+    public int getStock() {
         return stock;
     }
 
