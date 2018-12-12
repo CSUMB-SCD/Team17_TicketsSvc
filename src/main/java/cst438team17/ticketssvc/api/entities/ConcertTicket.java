@@ -5,6 +5,7 @@ public class ConcertTicket {
     private String artist;
     private String date;
     private String venue;
+    private int quantity;
     private int stock;
     private double price;
     private String description;
@@ -13,7 +14,7 @@ public class ConcertTicket {
     // private Venue venue;
     // private int numberOfTickets;
 
-    public ConcertTicket(String artist, String date, String venue, int stock, double price, String description) {
+    public ConcertTicket(String artist, String date, String venue, int quantity, int stock, double price, String description) {
         this.artist = artist;
         this.date = date;
         this.venue = venue;
@@ -52,6 +53,14 @@ public class ConcertTicket {
 
     public String getVenue() {
         return venue;
+    }
+
+    public void setQuantity (int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public void setNumberOfTickets (int numberOfTickets) {
