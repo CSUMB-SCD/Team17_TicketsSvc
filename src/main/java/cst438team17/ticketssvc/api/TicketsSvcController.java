@@ -2,6 +2,7 @@ package cst438team17.ticketssvc.api;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ public class TicketsSvcController {
 
     @GetMapping ("/ConcertTickets")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     List<ConcertTicket> getConcertTickets() {
         //This is where you call the TicketsDBSvc/getAll
         List<ConcertTicket> result = manager.getConcertTicketList();
